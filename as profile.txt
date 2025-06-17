@@ -1,0 +1,4 @@
+function prompt {
+    Write-Host "PS $($executionContext.SessionState.Path.CurrentLocation)" -ForegroundColor Cyan
+    return ">> "
+}

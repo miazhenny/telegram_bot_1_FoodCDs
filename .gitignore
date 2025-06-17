@@ -1,4 +1,12 @@
-.env
+# Игнорируем виртуальное окружение
+myenv/
+.env/
 __pycache__/
 *.pyc
+
+# VSCode
 .vscode/
+
+# ОС
+.DS_Store
+Thumbs.db

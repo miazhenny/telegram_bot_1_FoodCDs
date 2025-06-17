@@ -4,11 +4,11 @@ import json
 import os
 from datetime import datetime, timedelta
 from telegram import Update
-from telegram.ext import CallbackContext
-from config import JFOOD_FILE
+from telegram.ext import ContextTypes
+from .config import JFOOD_FILE
 
 
-def load_jfood():
+async def load_jfood():
     if os.path.exists(JFOOD_FILE):
         with open(JFOOD_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -19,12 +19,12 @@ def load_jfood():
         }
 
 
-def save_jfood(data):
+async def save_jfood(data):
     with open(JFOOD_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def add_jfood(update: Update, context: CallbackContext):
+async def add_jfood(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not context.args:
         update.message.reply_text("⚠ Укажи дату после команды, например: /add_jfood 01.05.2025")
         return
@@ -48,7 +48,7 @@ def add_jfood(update: Update, context: CallbackContext):
     )
 
 
-def jfood_cd(update: Update, context: CallbackContext):
+async def jfood_cd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     data = load_jfood()
 
     if not data["last_jfood_date"]:
@@ -75,7 +75,7 @@ def jfood_cd(update: Update, context: CallbackContext):
         )
 
 
-def lvlup_cd(update: Update, context: CallbackContext):
+async def lvlup_cd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     data = load_jfood()
 
     if not data["last_jfood_date"]:

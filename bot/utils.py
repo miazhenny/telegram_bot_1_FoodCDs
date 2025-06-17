@@ -4,7 +4,7 @@ import json
 import os
 import random
 from bot.config import WINS_FILE
-from bot.data.motivational_quotes import motivational_quotes
+from data.motivational_quotes import motivational_quotes
 
 
 wins = []  # Глобальный список побед

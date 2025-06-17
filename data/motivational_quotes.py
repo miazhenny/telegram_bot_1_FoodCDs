@@ -1,4 +1,23 @@
-motivational quotes = [
-    "1. Я не боюсь того, кто изучает десять тысяч различных ударов. Я боюсь того, кто изучает один удар десять тысяч раз. ❞
-
+#main_list_of_motivations
+motivational_quotes = [
+    "1) Absorb what is useful, discard what is not, add what is uniquely your own. ",
+    "2) If you always put limit on everything you do, physical or anything else. It will spread into your work and into your life. There are no limits. There are only plateaus, and you must not stay there, you must go beyond them. ",
+    "3)I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times.",
+    "4)Do not pray for an easy life, pray for the strength to endure a difficult one",
+    "5)Knowledge earns you power, character earns you respect.",
+    "6)Are you going to let the obstacles in your life be stumbling blocks or stepping stones? Choose the positive. You are the master of your attitude.",
+    "7)When you say that something is impossible, you have made it impossible.",
+    "8)Remember, success is a journey not a destination. Have faith in your ability. You will do just fine.",
+    "9) Empty your mind, be formless. Shapeless, like water.",
+    "10) If you put water into a cup, it becomes the cup. You put water into a bottle and it becomes the bottle. You put it in a teapot it becomes the teapot. Now, water can flow or it can crash. Be water, my friend.",
+    "11)Long-term consistency trumps short-term intensity.",
+    "12)In order to realize our true self we must be willing to live without being dependent upon the opinion of others.",
+    "13) If you spend too much time thinking about a thing, you'll never get it done.",
+    "14)Emotion can be the enemy, if you give into your emotion, you lose yourself. You must be at one with your emotion, because the body always follows the mind.",
+    "15)In the middle of chaos lies opportunity.",
+    "16)Defeat is a state of mind; no one is ever defeated until defeat has been accepted as a reality.",
+    "17)Out of chaos, find simplicity, From discord, find harmony.",
+    "18)Its not what happens that counts... It's how you react.",
+    "19)Every man today is the result of his thoughts yesterday.",
+    "20)Knowing is not enough, we must apply. Willing is not enough, we must do.",
 ]

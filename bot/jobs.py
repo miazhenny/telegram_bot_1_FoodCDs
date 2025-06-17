@@ -1,12 +1,12 @@
 # bot/jobs.py
 
 from datetime import datetime
-from telegram.ext import CallbackContext
+from telegram.ext import ContextTypes
 from bot.config import START_DATE
 from bot.config import ADMIN_ID
 
 
-def stage_day_reminder(context: CallbackContext):
+async def stage_day_reminder(context: ContextTypes.DEFAULT_TYPE):
     today = datetime.now()
     warsaw_time = today.strftime("%d.%m.%Y — %H:%M")
     day_number = (today.date() - START_DATE.date()).days + 1
@@ -27,7 +27,7 @@ def stage_day_reminder(context: CallbackContext):
     print(f"💾 Сохранил в user_data['last_stage_day']: {day_number}")
 
 
-def pytutor_reminder(context: CallbackContext):
+async def pytutor_reminder(context: ContextTypes.DEFAULT_TYPE):
     print("🔔 PyTutor reminder отправлен!")
 
     chat_id = getattr(context.job, 'chat_id', None) or context.user_data.get("chat_id", ADMIN_ID)
@@ -41,12 +41,12 @@ def pytutor_reminder(context: CallbackContext):
         print("❌ chat_id не найден")
 
 
-def test_reminder(update, context: CallbackContext):
+async def test_reminder(update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data["chat_id"] = update.effective_chat.id
     stage_day_reminder(context)
-    update.message.reply_text("Тестовое напоминание отправлено!")
+    await update.message.reply_text("Тестовое напоминание отправлено!")
 
 
-def test_pytutor(update, context: CallbackContext):
+async def test_pytutor(update, context: ContextTypes.DEFAULT_TYPE):
     pytutor_reminder(context)
-    update.message.reply_text("Тест PyTutor-напоминания отправлен!")
+    await update.message.reply_text("Тест PyTutor-напоминания отправлен!")

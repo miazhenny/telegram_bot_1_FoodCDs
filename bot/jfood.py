@@ -8,7 +8,7 @@ from telegram.ext import ContextTypes
 from .config import JFOOD_FILE
 
 
-async def load_jfood():
+def load_jfood():
     if os.path.exists(JFOOD_FILE):
         with open(JFOOD_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -19,7 +19,7 @@ async def load_jfood():
         }
 
 
-async def save_jfood(data):
+def save_jfood(data):
     with open(JFOOD_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 

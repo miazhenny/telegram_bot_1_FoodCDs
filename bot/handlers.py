@@ -134,7 +134,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         query.edit_message_text("Неизвестное действие.")
 
 
-async def register_handlers(application):
+def register_handlers(application):
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("motivate", motivate))
     application.add_handler(CommandHandler("creator", creator))
